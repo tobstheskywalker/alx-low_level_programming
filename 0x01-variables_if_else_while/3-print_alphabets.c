@@ -1,31 +1,17 @@
 #include <stdio.h>
-#include <unistd.h>
+
 /**
- * main - Entyr point
- * Description: prints two digits combination
- * Return: Always 0 (success)
+ * main - Prints the alphabetic in lower and upper case
+ *
+ * Return: Always (Success)
  */
 int main(void)
 {
-	int c, i;
-
-	for (c = '0'; c <= '9'; c++)
-	{
-		for (i = '0'; i <= '9'; i++)
-		{
-			if (c < i)
-			{
-				putchar(c);
-				putchar(i);
-
-				if (c != '8' || (c == '8' && i != '9'))
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
-		}
-	}
+	char c;
+	for (c = 'a'; c <= 'z'; c++)
+	putchar(c);
+	for (c = 'A'; c <= 'Z'; c++)
+	putchar(c);
 	putchar('\n');
 	return (0);
 }
